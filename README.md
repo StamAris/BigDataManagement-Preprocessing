@@ -48,3 +48,69 @@
 * **Spark DataFrame Creation:**
 
 > The data fetched into the Colab notebook was transformed into a Spark DataFrame ("weather_df") for scalable and distributed data processing. The Spark DataFrame facilitated efficient exploratory data analysis and machine learning tasks.
+
+---
+**Exploratory Data Analysis**
+
+**Code Overview**
+
+We conducted a clustering analysis on geographical data considering three temperature attributes: `degrees_from_mean`, `max_temp`, and `min_temp`. Here's a summary of the key steps:
+
+* **Data Selection**: Relevant columns, including `latitude`, `longitude`, `degrees_from_mean`, `max_temp`, `min_temp`, and `date_str`, were selected for clustering.
+* **Vector Assembly**: Features were assembled into a vector using VectorAssembler.
+* **KMeans Modeling**: The KMeans model was trained on the assembled features, with the number of clusters set to 15 based on previous analysis.
+* **Clustered Data**: The model was applied to the data, and the resulting clusters were assigned to each data point.
+* **Average Temperature Calculation**: For each cluster, date_str, and temperature attribute, the average temperature was calculated.
+
+**Visualizations**
+We visualized the average temperature for each cluster over time, considering all three temperature attributes. Subplots for each cluster facilitated the observation of temporal trends.
+
+**Trend Analysis**
+
+**Code Overview**
+
+We extended our analysis to explore trends within each cluster over time for all three temperature attributes. Here are the steps:
+
+* **Linear Regression Analysis**: A linear regression model was fitted to the average temperature over time for each cluster and temperature attribute.
+* **Trend Line Plotting**: Actual data and the fitted trend line were plotted to visualize trends.
+* **Hypothesis Testing**: Hypothesis testing was performed to assess the significance of trends.
+* **Thresholds**: Trends were categorized as significant or not based on predetermined thresholds for t-statistic and p-value.
+
+**Visualizations**
+Visualizations were created for yearly averages, every 5 years averages, and every decade averages, considering all three temperature attributes. Plots include actual data, trend lines, and information on the significance of trends.
+
+
+This comprehensive analysis enhances our understanding of spatial-temporal patterns in `degrees_from_mean`, `max_temp`, and `min_temp`. The combination of clustering and trend analysis provides a holistic view of temperature variations and trends across different clusters, aiding in more informed decision-making and insights into the complex dynamics of temperature fluctuations.
+
+---
+
+### **Conclusions - Interpretation of Statistical Analysis Results**
+
+**Overview**
+The statistical analysis and hypothesis significance tests were conducted to assess the trends in temperature attributes—`degrees_from_mean`, `max_temp`, and `min_temp`. The results consistently show upward and significant trends across all three attributes. The key findings are as follows:
+
+**1. Degrees from Mean**
+
+- **Upward Trend**: The analysis reveals a consistent upward trend in the `degrees_from_mean` attribute across different clusters.
+- **Significance**: The trends are statistically significant, as indicated by t-statistic values consistently greater than 2 and p-values consistently below 0.05.
+
+**2. Maximum Temperature (`max_temp`)**
+
+- **Upward Trend**: Similar to `degrees_from_mean`, the `max_temp` attribute exhibits a significant upward trend across clusters.
+- **Statistical Significance**: The t-statistic values, consistently exceeding 2, and the p-values consistently below 0.05 emphasize the statistical significance of these trends.
+
+**3. Minimum Temperature (`min_temp`)**
+
+- **Strong Upward Trend**: The `min_temp` attribute displays a robust and significant upward trend in all clusters.
+- **Statistical Significance**: The t-statistic values consistently surpassing 2 and p-values consistently below 0.05 underscore the statistical significance of the observed trends.
+
+**Implications and Considerations**
+* **Consistency Across Attributes**: The uniformity of upward trends in all three temperature attributes suggests a broader climatic pattern or environmental influence affecting the study area.
+  
+* **Climate Change Indicators**: The significant and consistent nature of these trends aligns with expectations in the context of global climate change, indicating a warming trend in the region.
+
+* **Min_temp Sensitivity**: The heightened significance and magnitude of trends in `min_temp` underscore its sensitivity to climate variations. This insight can be crucial for assessing potential impacts on ecosystems and human activities sensitive to minimum temperature fluctuations.
+
+* **Policy and Planning**: These findings have implications for policymakers, urban planners, and environmental scientists, emphasizing the importance of considering temperature trends in long-term planning and decision-making.
+
+In summary, the statistical analysis confirms the presence of significant upward trends in temperature attributes, providing valuable insights into climate dynamics and aiding in the formulation of informed strategies for adaptation and mitigation.
