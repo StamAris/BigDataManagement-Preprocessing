@@ -50,7 +50,30 @@
 > The data fetched into the Colab notebook was transformed into a Spark DataFrame ("weather_df") for scalable and distributed data processing. The Spark DataFrame facilitated efficient exploratory data analysis and machine learning tasks.
 
 ---
-**Exploratory Data Analysis**
+### **Temperature Anomaly Analysis**
+**Identify extreme temperatures with a z-score threshold**
+
+In this phase, we conduct an analysis of temperature anomalies by calculating z-scores based on the mean and standard deviation of the 'degrees_from_mean' attribute. Z-scores help identify data points that deviate significantly from the mean, allowing us to pinpoint extreme temperature events.
+
+**Statistical Summary**
+* **Mean and Standard Deviation**: The Spark DataFrame `stats_df` is created to store the mean and standard deviation of 'degrees_from_mean'. These statistical measures serve as a basis for determining the degree of deviation of individual data points.
+
+* **Z-score Calculation**: The 'z_score' column is added to the DataFrame `anomaly_df` using the formula:
+   Z =(X - mean)/stddev
+   where \(X\) represents the 'degrees_from_mean'. Z-scores quantify how many standard deviations a data point is from the mean.
+
+**Z-score Analysis**
+* **Display Z-scores**: The DataFrame `anomaly_df` is displayed, showcasing the calculated z-scores for each data point, providing insights into the relative magnitude of temperature anomalies.
+
+* **Identification of Extreme Temperatures**: Extreme temperatures are identified by applying a threshold to the z-scores. In this case, temperatures with z-scores greater than 4 or less than -4 are considered extreme. The DataFrame `extreme_temps` contains these extreme temperature events.
+
+**Degrees from Mean Analysis**
+The DataFrame `degrees_from_mean_analysis` is created to focus on the 'degrees_from_mean' attribute, providing a concise view of the temperature anomalies over time.
+
+
+By leveraging z-scores, this analysis allows us to categorize and investigate extreme temperature events, providing a statistical perspective on the anomalies present in the dataset. Subsequent sections will explore temporal trends, spatial patterns, and potential correlations to enhance our understanding of the weather dataset.
+---
+### **Exploratory Data Analysis**
 
 **Code Overview**
 
