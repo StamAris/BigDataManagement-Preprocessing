@@ -70,8 +70,8 @@ In this phase, we conduct an analysis of temperature anomalies by calculating z-
 **Degrees from Mean Analysis**
 The DataFrame `degrees_from_mean_analysis` is created to focus on the 'degrees_from_mean' attribute, providing a concise view of the temperature anomalies over time.
 
-
 By leveraging z-scores, this analysis allows us to categorize and investigate extreme temperature events, providing a statistical perspective on the anomalies present in the dataset. Subsequent sections will explore temporal trends, spatial patterns, and potential correlations to enhance our understanding of the weather dataset.
+
 ---
 ### **Exploratory Data Analysis**
 
