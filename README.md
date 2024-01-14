@@ -1,4 +1,4 @@
-(Project Notebook under master branch)
+(**Note**: Project Notebook under master branch)
 
 # Exploring Climate Change through Historical Weather Data
 
