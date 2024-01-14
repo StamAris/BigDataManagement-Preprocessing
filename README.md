@@ -31,6 +31,8 @@
 *	Statistical Analysis: SciPy, Statsmodels
 
 ---
+## Project Outline
+
 ### **Load Dataset from BigQuery**
 
 * **Data Hosting on Google Storage (bdmp_bucket):**
