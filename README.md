@@ -1,9 +1,5 @@
 # Exploring Climate Change through Historical Weather Data
 
-## Objective 
-Climate change is a critcal global issue with far-reaching consequences. Motvated by a keen interest in environmental science and the urgency of understanding climate patterns, this project aims to analyze historical weather data to explore trends and anomalies that may indicate the presence of climate change. The project's significance lies in contributng insights that can inform discussions and actions related to environmental sustainability.
-
-
 #### **Basic Information:**
 
 *	**Project Title:** Exploring Climate Change through Historical Weather Data
@@ -35,3 +31,20 @@ Climate change is a critcal global issue with far-reaching consequences. Motvate
 *	Statistical Analysis: SciPy, Statsmodels
 
 ---
+### **Load Dataset from BigQuery**
+
+* **Data Hosting on Google Storage (bdmp_bucket):**
+
+> The project began with hosting the weather anomaly dataset on Google Storage, utilizing the **"bdmp_bucket"** as the storage location. Google Storage provides scalable and secure object storage, making it an ideal choice for managing large datasets.
+
+* **Data Loading into BigQuery:**
+
+> Leveraging Google Cloud's BigQuery, the dataset hosted in the Google Storage bucket was loaded into BigQuery tables, with **project_id = "bamboo-chemist-402814"**. BigQuery is a fully managed, serverless data warehouse that allows for fast SQL queries on large datasets.
+
+* **Loading Data from BigQuery to Colab Notebook:**
+
+> The notebook utilized the google-cloud-sdk and BigQuery's Python client library to run a SQL query against the dataset stored in BigQuery. The query results were fetched into the Colab notebook under the variable name "results".
+
+* **Spark DataFrame Creation:**
+
+> The data fetched into the Colab notebook was transformed into a Spark DataFrame ("weather_df") for scalable and distributed data processing. The Spark DataFrame facilitated efficient exploratory data analysis and machine learning tasks.
